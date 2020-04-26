@@ -176,7 +176,8 @@ def mine():
 
     # We must receive a reward for finding the proof
     # The product_id is "0" to signify that this node has mined a new coin.
-    blockchain.new_transaction(
+    if blockchain.current_transaction == []:
+    	blockchain.new_transaction(
         product_id="0",
         recipient=node_identifier,
         location="",
@@ -206,7 +207,7 @@ def new_transaction():
         return "Missing values", 400
 
     # create a new transaction
-    index = blockchain.new_transaction((values['product_id'], values['recipient']), values['location'])
+    index = blockchain.new_transaction(values['product_id'], values['recipient'], values['location'])
 
     response = {'message': f'Transaction will be added to block {index}'}
     return jsonify(response), 201
