@@ -24,6 +24,15 @@ $ pip install -r requirements.txt
 $ python blockchain.py
 ```
 > if python2 is installed replace pip with pip3 in the second step
+>
+> If the port is already used replace it with a different port or use the following meathod
+```
+$ netstat -tupln
+```
+from here find the pid of the programme using port 5000, kill it using the follwng command
+```
+$ kill -9 (pid from the above step)
+```
 
 ___
 
