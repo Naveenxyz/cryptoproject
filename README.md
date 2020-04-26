@@ -29,8 +29,8 @@ ___
 
 Make sure [Postman](https://www.postman.com/) is installed, postman is a tool used to make web requests
 
-* GET:'http://0.0.0.0:5000/mine' - creates new block with proof of work
-* POST:'http://0.0.0.0:5000/transactions/new' - create new transactions
-* GET:'http://0.0.0.0:5000/chain' - shows the full blockchain
+* GET: 'http://0.0.0.0:5000/mine' - creates new block with proof of work
+* POST: 'http://0.0.0.0:5000/transactions/new' - create new transactions
+* GET: 'http://0.0.0.0:5000/chain' - shows the full blockchain
 * POST: 'http://0.0.0.0:5000/nodes/register' - will register the node for send nodes address
 * GET: 'http://0.0.0.0:5000/nodes/resolve' - This will valid the longest chain in blockchain and shows the authoritized chain

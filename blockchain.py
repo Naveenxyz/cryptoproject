@@ -1,4 +1,3 @@
-# refernce https://hackernoon.com/learn-blockchains-by-building-one-117428612f46
 import hashlib
 import json
 from textwrap import dedent
@@ -6,7 +5,7 @@ from time import time
 from uuid import uuid4
 from urllib.parse import urlparse
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 
 class Blockchain(object):
@@ -163,7 +162,11 @@ blockchain = Blockchain()
 
 @app.route('/')
 def homeroute():
-    return("This is the home route of blockchain project")
+    # return("This is the home route of blockchain project")
+    # return app.send_static_file("index.html")
+    # return app.send_static_file("index.html")
+    return render_template("index.html")
+
 @app.route('/mine', methods=['GET'])
 def mine():
     # We run the proof of work algorithm to get the next proof
